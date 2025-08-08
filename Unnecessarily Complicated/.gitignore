@@ -1,0 +1,74 @@
+# -------------------------------------
+# Unity Project .gitignore
+# Optimiert für korrekte Prefab-Verlinkung und saubere Repositories
+# Quelle: Basierend auf https://github.com/github/gitignore/blob/main/Unity.gitignore
+# -------------------------------------
+
+# ========== WICHTIG ==========
+# Stelle sicher, dass .meta-Dateien nicht ignoriert werden!
+!*.meta
+
+# ========== Ignorieren ==========
+# Unity generierte Ordner
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+# (Tipp: Immer ALLES unter 'Assets/' committen)
+
+# Editor-spezifische Tools und generierte Dateien
+/[Aa]ssets/Plugins/Editor/JetBrains*
+/[Aa]ssets/AssetStoreTools*
+
+# Memory Captures und Recordings
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# Visual Studio / Jetbrains Rider
+.vs/
+.gradle/
+ExportedObj/
+.consulo/
+
+# Projekt- und Solution-Dateien
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Debug-/Datenbank-Meta-Dateien, die ignoriert werden dürfen
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Unity Crash Reports
+sysinfo.txt
+
+# Build-Exporte
+*.apk
+*.aab
+*.unitypackage
+*.app
+
+# Crashlytics (nur bei Mobile Builds nötig)
+crashlytics-build.properties
+
+# Addressables (nur temporäre Binärdateien ignorieren, NICHT die Konfiguration!)
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# Temporäre StreamingAssets (Android builds)
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
