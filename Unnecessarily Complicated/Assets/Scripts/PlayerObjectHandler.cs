@@ -10,7 +10,6 @@ public class PlayerObjectHandler : MonoBehaviour
     public Transform parent;
     public Transform sphere;
 
-
     public int objectsOnTopInt = 0;
 
     Collision thisCollision;
@@ -52,19 +51,18 @@ public class PlayerObjectHandler : MonoBehaviour
 
     public void PlayerGivingObject()
     {
-        Debug.Log("Player give Object");
-
         if (objectsOnTopInt == 0)
         {
             Debug.Log("No Object on top");
         }
         else
         {
+            Debug.Log("Player give Object");
+
             objectsOnTopInt = objectsOnTopInt - 1;
             HandleObjects(-1);
+            HandleCube(-1);
         }
-
-        HandleCube(-1);
     }
 
     void HandleObjects(int change)

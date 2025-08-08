@@ -5,12 +5,35 @@ using TMPro;
 
 public class CubeHandler : MonoBehaviour
 {
+    public List<GameObject> objectsOnTop = new List<GameObject>();
     public bool givingOutput;
     public bool takingInput;
     public int countOnCube = 1;
     public int changeInCount = 1;
 
+    public GameObject prefab;
+    public Transform parent;
+
     public List<GameObject> TextComponents;
+
+    private void Start()
+    {
+        for (int i = 0; i < countOnCube; i++)
+        {
+            // Prefab instanziieren
+            GameObject obj = Instantiate(prefab, parent);
+
+            // Optional: Lokale Position/Rotation zurücksetzen
+            obj.transform.localPosition = Vector3.zero;
+            obj.transform.localRotation = Quaternion.identity;
+
+            float up = 2.3f + (0.5f * i);
+
+            obj.transform.position += new Vector3(0f, up, 0f);
+
+            objectsOnTop.Add(obj);
+        }
+    }
 
     private void Update()
     {
@@ -24,6 +47,18 @@ public class CubeHandler : MonoBehaviour
         if (takingInput)
         {
             countOnCube = countOnCube - changeInCount;
+
+            GameObject obj = Instantiate(prefab, parent);
+
+            // Optional: Lokale Position/Rotation zurücksetzen
+            obj.transform.localPosition = Vector3.zero;
+            obj.transform.localRotation = Quaternion.identity;
+
+            float up = 2.3f + (0.5f * countOnCube - 0.5f);
+
+            obj.transform.position += new Vector3(0f, up, 0f);
+
+            objectsOnTop.Add(obj);
         }
         if (givingOutput)
         {
@@ -34,6 +69,11 @@ public class CubeHandler : MonoBehaviour
             else
             {
                 countOnCube = countOnCube - changeInCount;
+
+                GameObject objectToDestroy = objectsOnTop[objectsOnTop.Count - 1];
+
+                objectsOnTop.Remove(objectToDestroy);
+                Destroy(objectToDestroy);
             }
         }
     }
