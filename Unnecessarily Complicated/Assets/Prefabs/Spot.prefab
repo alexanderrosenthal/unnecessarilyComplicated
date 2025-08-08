@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 4078392474870253106}
   - component: {fileID: 5752352241039331548}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: CubeSpot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -389,6 +389,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be1bc0b9ca563d409b1d44c0e72dc62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  givingOutput: 0
+  takingInput: 0
+  countOnCube: 1
+  changeInCount: 1
   TextComponents:
   - {fileID: 4968404654208015329}
   - {fileID: 290897787158928990}
