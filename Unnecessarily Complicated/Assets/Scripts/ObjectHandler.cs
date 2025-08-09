@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerObjectHandler : MonoBehaviour
+public class ObjectHandler : MonoBehaviour
 {
     public List<GameObject> objectsOnTop = new List<GameObject>();
 

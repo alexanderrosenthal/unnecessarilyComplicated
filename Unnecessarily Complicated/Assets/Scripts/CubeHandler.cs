@@ -9,7 +9,7 @@ public class CubeHandler : MonoBehaviour
     public bool givingOutput;
     public bool takingInput;
     public int countOnCube = 1;
-    public int changeInCount = 1;
+    public int localChangeInCount = 1;
 
     public GameObject prefab;
     public Transform parent;
@@ -42,11 +42,11 @@ public class CubeHandler : MonoBehaviour
 
     public void HandleInputOnCube(int changeInCount)
     {
-        changeInCount = changeInCount;
+        localChangeInCount = changeInCount;
 
         if (takingInput)
         {
-            countOnCube = countOnCube - changeInCount;
+            countOnCube = countOnCube - localChangeInCount;
 
             GameObject obj = Instantiate(prefab, parent);
 
