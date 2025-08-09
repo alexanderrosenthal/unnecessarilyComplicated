@@ -534,7 +534,7 @@ MonoBehaviour:
   home: {fileID: 0}
   animal: {fileID: 7403162792425770851}
   animalBody: {fileID: 2272553690326108419}
-  moveSpeed: 2
+  moveSpeed: 1
   onTheWayTowards: 1
   potentialTargets: []
 --- !u!1 &6900549509489867826
@@ -719,6 +719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsOnTop: []
   objectsEatenInt: 0
+  satt: 0
 --- !u!1 &7821888265778658068
 GameObject:
   m_ObjectHideFlags: 0

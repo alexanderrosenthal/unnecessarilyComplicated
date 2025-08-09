@@ -392,8 +392,9 @@ MonoBehaviour:
   objectsOnTop: []
   givingOutput: 0
   takingInput: 0
+  maxCountOnCube: 5
   countOnCube: 1
-  changeInCount: 1
+  localChangeInCount: 1
   prefab: {fileID: 838452435976121620, guid: 1511d456b61598040aa2264039723fcf, type: 3}
   parent: {fileID: 7149366039342024226}
   TextComponents:
@@ -401,6 +402,8 @@ MonoBehaviour:
   - {fileID: 290897787158928990}
   - {fileID: 6629389331268667}
   - {fileID: 3965259309596659299}
+  minInterval: 0.1
+  maxInterval: 0.2
 --- !u!33 &812738054364730287
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -429,7 +432,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 966a563c7a17a3545b05c4bd660cecf1, type: 2}
+  - {fileID: 2100000, guid: 3d7d7280cc09855489bfa5a305660381, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -2,13 +2,13 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
 
-public class InstantiateAsChild : MonoBehaviour
+public class AnimalSpawn : MonoBehaviour
 {
     public GameObject prefab;   // Das Prefab, das instanziert werden soll
     public Transform parent;    // Das Parent-Objekt, unter dem das neue Objekt liegen soll
 
     public int maxPigs = 5;
-    private int maxPigsCount = 0;
+    public int maxPigsCount = 0;
 
     public Transform spawnParent;
     public List<Transform> spawnPoints = new List<Transform>();
@@ -43,10 +43,16 @@ public class InstantiateAsChild : MonoBehaviour
 
     void TriggerAction()
     {
-        if (maxPigsCount == maxPigs)
+        if (maxPigsCount > maxPigs)
         {
+            Debug.Log("no more pigs");
             return;
         }
+
+
+        maxPigsCount = maxPigsCount + 1;
+        
+        Debug.Log("maxPigsCount " + maxPigsCount);
 
         int random = Random.Range(0, spawnPoints.Count);
 
@@ -67,7 +73,6 @@ public class InstantiateAsChild : MonoBehaviour
 
             instance.transform.GetChild(0).GetComponent<AnimalMovement>().home = parent;
 
-            maxPigsCount = maxPigsCount + 1;
         }
         else
         {
