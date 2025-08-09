@@ -8,6 +8,7 @@ public class AnimalSpawn : MonoBehaviour
     public Transform parent;    // Das Parent-Objekt, unter dem das neue Objekt liegen soll
 
     public int maxPigs = 5;
+
     public int maxPigsCount = 0;
 
     public Transform spawnParent;
@@ -51,7 +52,7 @@ public class AnimalSpawn : MonoBehaviour
 
 
         maxPigsCount = maxPigsCount + 1;
-        
+
         Debug.Log("maxPigsCount " + maxPigsCount);
 
         int random = Random.Range(0, spawnPoints.Count);

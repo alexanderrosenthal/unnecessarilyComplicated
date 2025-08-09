@@ -39,9 +39,9 @@ public class AnimalMovement : MonoBehaviour
 
             // Schrittweite pro Frame
             float step = moveSpeed * Time.deltaTime;
-
+ 
             // Bewege das Objekt gleichmäßig in Richtung Ziel
-            animal.position = Vector3.MoveTowards(transform.position, target.position, step);
+            animal.position =Vector3.MoveTowards(transform.position, target.position, step);
 
             animalBody.LookAt(target);
         }
