@@ -38,7 +38,7 @@ public class CubeHandler : MonoBehaviour
             objectsOnTop.Add(obj);
         }
 
-        //StartCoroutine(TriggerRoutine());
+        StartCoroutine(TriggerRoutine());
     }
 
     //WACHSTUM
@@ -59,12 +59,12 @@ public class CubeHandler : MonoBehaviour
     {
         if (givingOutput && countOnCube < maxCountOnCube)
         {
-            IncreaseFood();
+            HandleInputOnCubePig(-1, false);
         }
     }
 
     //ÜBER PLAYER
-    public void HandleInputOnCube(int changeInCount, bool figureOnIT)
+    public void HandleInputOnCubePlayer(int changeInCount, bool figureOnIT)
     {
         localChangeInCount = changeInCount;
 
@@ -74,20 +74,46 @@ public class CubeHandler : MonoBehaviour
         }
         if (givingOutput)
         {
-            if (countOnCube == 0)
+            DecreaseFood(changeInCount);
+        }
+    }
+
+    public void HandleInputOnCubePig(int changeInCount, bool figureOnIT)
+    {
+        localChangeInCount = changeInCount;
+
+        if (takingInput)
+        {
+            DecreaseFood(changeInCount);
+        }
+        if (givingOutput)
+        {
+            if (countOnCube == 0 && figureOnIT)
             {
                 Debug.Log("Cube ist 0 -->" + countOnCube);
             }
             else
             {
-                countOnCube = countOnCube - changeInCount;
-
-                GameObject objectToDestroy = objectsOnTop[objectsOnTop.Count - 1];
-
-                objectsOnTop.Remove(objectToDestroy);
-                Destroy(objectToDestroy);
+                if (!figureOnIT)
+                {
+                    IncreaseFood();
+                }
+                else
+                {
+                    DecreaseFood(changeInCount);
+                }
             }
         }
+    }
+
+    private void DecreaseFood(int changeInCount)
+    {
+        countOnCube = countOnCube - changeInCount;
+
+        GameObject objectToDestroy = objectsOnTop[objectsOnTop.Count - 1];
+
+        objectsOnTop.Remove(objectToDestroy);
+        Destroy(objectToDestroy);
     }
 
     private void IncreaseFood()

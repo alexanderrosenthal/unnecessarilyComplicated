@@ -12,7 +12,7 @@ public class FoodHandler : MonoBehaviour
     CubeHandler cubeHandler;
 
     bool colliding = false;
-    bool satt;
+    public bool satt;
 
     void OnCollisionEnter(Collision collision)
     {
@@ -51,6 +51,6 @@ public class FoodHandler : MonoBehaviour
 
     void HandleCube(int change)
     {
-        cubeHandler.HandleInputOnCube(change, true);
+        cubeHandler.HandleInputOnCubePig(change, true);
     }
 }
