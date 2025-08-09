@@ -33,9 +33,13 @@ public class ObjectHandler : MonoBehaviour
         {
             PlayerGivingObject();
         }
-        if (cubeHandler.givingOutput)
+        if (cubeHandler.givingOutput && cubeHandler.countOnCube > 0)
         {
             PlayerTakingObject();
+        }
+        else
+        {
+            Debug.Log("Empty");
         }
     }
 
@@ -105,6 +109,6 @@ public class ObjectHandler : MonoBehaviour
 
     void HandleCube(int change)
     {
-        cubeHandler.HandleInputOnCube(change);
+        cubeHandler.HandleInputOnCube(change, true);
     }
 }

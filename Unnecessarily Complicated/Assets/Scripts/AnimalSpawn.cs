@@ -28,7 +28,6 @@ public class InstantiateAsChild : MonoBehaviour
         StartCoroutine(TriggerRoutine());
     }
 
-
     IEnumerator TriggerRoutine()
     {
         while (true)

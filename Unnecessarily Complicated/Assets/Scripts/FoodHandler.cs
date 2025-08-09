@@ -20,7 +20,7 @@ public class FoodHandler : MonoBehaviour
 
         if (collision.gameObject.name.Contains("CubeSpot"))
         {
-            Debug.Log("Animal collission");
+            //Debug.Log("Animal collission");
             colliding = true;
 
             cubeHandler = collision.gameObject.transform.GetComponent<CubeHandler>();
@@ -51,6 +51,6 @@ public class FoodHandler : MonoBehaviour
 
     void HandleCube(int change)
     {
-        cubeHandler.HandleInputOnCube(change);
+        cubeHandler.HandleInputOnCube(change, true);
     }
 }
