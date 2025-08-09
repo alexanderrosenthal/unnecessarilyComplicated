@@ -1,18 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera : MonoBehaviour
+public class FollowCamera : MonoBehaviour
 {
-    public Transform target;
-    public float smoothSpeed = 0.125f;
-    public Vector3 offset;
+    [Header("Target")]
+    public Transform target; // Kugel
 
-    void Update()
+    [Header("Follow Settings")]
+    public float smoothSpeed = 0.125f;       
+    public Vector3 offset = new Vector3(0f, 5f, -10f); 
+
+    void LateUpdate()
     {
-        Vector3 desiredPosition = target.position + offset;
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
-        transform.position = smoothedPosition;
-    }
+        if (target == null) return;
 
+        // Position = Kugelposition + statischer Offset (keine Rotation der Kugel)
+        Vector3 desiredPosition = target.position + offset;
+
+        // Weiche Bewegung
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+        transform.position = smoothedPosition;
+
+        // Kamera schaut zur Kugel, ohne Kippen
+        Vector3 lookDirection = target.position - transform.position;
+        lookDirection.y = 0f; 
+        transform.rotation = Quaternion.LookRotation(lookDirection, Vector3.up);
+    }
 }

@@ -1,39 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class BallController : MonoBehaviour
 {
     public Rigidbody rig;
-    public float moveSpeed = 10f;
-    bool useTorque = true;
 
-    float inputX;
-    float inputZ;
+    [Header("Settings")]
+    public float turnTorque = 5f;   // Drehmoment für links/rechts
+    public float moveForce = 10f;   // Vortriebskraft vor/zurück
+
+    private float inputX;
+    private float inputZ;
 
     void Start()
     {
-        // Interpolation aktivieren
         if (rig != null)
         {
             rig.interpolation = RigidbodyInterpolation.Interpolate;
+            rig.maxAngularVelocity = 100f; // verhindert Begrenzung bei hohem Drehmoment
         }
     }
 
     void Update()
     {
-        // Eingaben nur hier abfragen
-        inputX = Input.GetAxisRaw("Horizontal");
-        inputZ = Input.GetAxisRaw("Vertical");
+        inputX = Input.GetAxisRaw("Horizontal"); // A/D -> seitliches Rollen
+        inputZ = Input.GetAxisRaw("Vertical");   // W/S -> vor/zurück Rollen
     }
 
     void FixedUpdate()
     {
-        // Physik nur hier
-        if (useTorque)
+        // 1. Links/Rechts rollen
+        if (Mathf.Abs(inputX) > 0.01f)
         {
-            Vector3 torque = new Vector3(inputX, 0f, inputZ) * moveSpeed;
-            rig.AddTorque(torque, ForceMode.Force);
+            Vector3 torqueDir = -transform.forward * inputX * turnTorque;
+            rig.AddTorque(torqueDir, ForceMode.VelocityChange);
+        }
+
+        // 2. Vorwärts/Rückwärts rollen
+        if (Mathf.Abs(inputZ) > 0.01f)
+        {
+            Vector3 torqueDir = transform.right * inputZ * moveForce;
+            rig.AddTorque(torqueDir, ForceMode.VelocityChange);
         }
     }
 }

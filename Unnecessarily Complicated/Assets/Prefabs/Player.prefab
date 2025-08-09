@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 2118903078624291769}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5813413, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -127,7 +127,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6944632088835693386}
         m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: Control
+        m_MethodName: GiveSpeed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -187,6 +187,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 4edcdf20-fc74-4a37-98dd-3cc7116325af
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2604416147351994463}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c0478c07-fba9-4ae0-992a-02155661b30f
+    m_ActionName: Player/MoveSpeed[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -205,7 +221,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rig: {fileID: 864846363682865280}
-  moveSpeed: 50
+  turnTorque: 1
+  moveForce: 1
 --- !u!1 &7086685355275527460
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +253,7 @@ Transform:
   m_GameObject: {fileID: 7086685355275527460}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -339,9 +356,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7086685355275527460}
   serializedVersion: 4
-  m_Mass: 0.5
+  m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0.1
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -369,7 +386,7 @@ GameObject:
   - component: {fileID: 7003800220490720118}
   - component: {fileID: 3469955964907303861}
   - component: {fileID: 3509736920943132433}
-  - component: {fileID: 886861800215781905}
+  - component: {fileID: 3939885049241006550}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -385,13 +402,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7750958451675219487}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.122423194, y: -0.6964285, z: 0.122423194, w: 0.6964285}
-  m_LocalPosition: {x: 8.6, y: 8.926213, z: -0.13}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.77, y: 1.13, z: 4.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 465670846096959043}
-  m_LocalEulerAnglesHint: {x: 19.94, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &3469955964907303861
 Camera:
   m_ObjectHideFlags: 0
@@ -451,7 +468,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7750958451675219487}
   m_Enabled: 1
---- !u!114 &886861800215781905
+--- !u!114 &3939885049241006550
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -464,5 +481,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 354259760790937168}
-  smoothSpeed: 5
-  offset: {x: 8.6, y: 8.926213, z: -0.13}
+  smoothSpeed: 0.125
+  offset: {x: 0, y: 5, z: -10}
