@@ -45,7 +45,7 @@ public class ObjectHandler : MonoBehaviour
 
     public void PlayerTakingObject()
     {
-        Debug.Log("Player take Object");
+        //Debug.Log("Player take Object");
         objectsOnTopInt = objectsOnTopInt + 1;
 
         HandleObjects(1);
@@ -61,7 +61,7 @@ public class ObjectHandler : MonoBehaviour
         }
         else
         {
-            Debug.Log("Player give Object");
+            //Debug.Log("Player give Object");
 
             objectsOnTopInt = objectsOnTopInt - 1;
             HandleObjects(-1);
@@ -109,6 +109,6 @@ public class ObjectHandler : MonoBehaviour
 
     void HandleCube(int change)
     {
-        cubeHandler.HandleInputOnCube(change, true);
+        cubeHandler.HandleInputOnCubePlayer(change, true);
     }
 }
