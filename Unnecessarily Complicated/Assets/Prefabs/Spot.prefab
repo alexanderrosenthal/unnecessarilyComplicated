@@ -372,7 +372,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 2, y: 0.68123776, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7361453648511089358}
@@ -395,6 +395,8 @@ MonoBehaviour:
   maxCountOnCube: 5
   countOnCube: 1
   localChangeInCount: 1
+  startScale: {x: 1.8, y: 1, z: 1.8}
+  scaleFactor: 0.9
   prefab: {fileID: 838452435976121620, guid: 1511d456b61598040aa2264039723fcf, type: 3}
   parent: {fileID: 7149366039342024226}
   TextComponents:
@@ -873,14 +875,15 @@ Transform:
   m_GameObject: {fileID: 5325572391540831618}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -8.09, y: -2.53, z: 17.48}
+  m_LocalScale: {x: 1.9143507, y: 0.9913372, z: 1.7507106}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5951356978829146046}
   - {fileID: 2124890170700305058}
   - {fileID: 7149366039342024226}
   - {fileID: 2821410569083128908}
+  - {fileID: 1882787270039036718}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5756953586973015124
@@ -898,7 +901,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2821410569083128908
 Transform:
   m_ObjectHideFlags: 0
@@ -944,6 +947,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.745, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7361453648511089358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8918218742327823139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1882787270039036718}
+  m_Layer: 0
+  m_Name: Rahmen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1882787270039036718
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8918218742327823139}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

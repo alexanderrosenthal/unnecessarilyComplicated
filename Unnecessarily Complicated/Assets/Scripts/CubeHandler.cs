@@ -12,6 +12,9 @@ public class CubeHandler : MonoBehaviour
     public int countOnCube = 1;
     public int localChangeInCount = 1;
 
+    [SerializeField] private Vector3 startScale = Vector3.one; // Unterschiedliche Startgrößen für X, Y, Z
+    [SerializeField] private float scaleFactor = 0.9f;         // Gleicher Faktor für alle Achsen
+
     public GameObject prefab;
     public Transform parent;
 
@@ -31,7 +34,7 @@ public class CubeHandler : MonoBehaviour
             obj.transform.localPosition = Vector3.zero;
             obj.transform.localRotation = Quaternion.identity;
 
-            float up = 2.3f + (0.5f * i);
+            float up = 1.8f + (0.5f * i);
 
             obj.transform.position += new Vector3(0f, up, 0f);
 
@@ -126,7 +129,7 @@ public class CubeHandler : MonoBehaviour
         obj.transform.localPosition = Vector3.zero;
         obj.transform.localRotation = Quaternion.identity;
 
-        float up = 2.3f + (0.5f * countOnCube - 0.5f);
+        float up = 2f + (0.5f * countOnCube - 0.5f);
 
         obj.transform.position += new Vector3(0f, up, 0f);
 
@@ -137,6 +140,7 @@ public class CubeHandler : MonoBehaviour
     //TEXT
     private void Update()
     {
+        HandleTreeSize();
         HandleText();
     }
 
@@ -147,6 +151,14 @@ public class CubeHandler : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             TextComponents[i].GetComponent<TMP_Text>().text = textToChange;
+        }
+    }
+    void HandleTreeSize()
+    {
+        for (int i = 0; i < objectsOnTop.Count; i++)
+        {
+            float factor = Mathf.Pow(scaleFactor, i);
+            objectsOnTop[i].transform.localScale = startScale * factor;
         }
     }
 }
