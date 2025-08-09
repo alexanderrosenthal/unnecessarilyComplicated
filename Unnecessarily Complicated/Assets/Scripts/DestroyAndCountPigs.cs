@@ -29,7 +29,7 @@ public class DestroyAndCountPigs : MonoBehaviour
             {
                 Destroy(collision.gameObject);
 
-                countOfSattPigsHere = countOfSattPigsHere + 1;
+
                 Score.GetComponent<Score>().countOfSattPigsTotal = Score.GetComponent<Score>().countOfSattPigsTotal + 1;
 
                 AnimalSpawn.GetComponent<AnimalSpawn>().maxPigsCount = AnimalSpawn.GetComponent<AnimalSpawn>().maxPigsCount - 1;

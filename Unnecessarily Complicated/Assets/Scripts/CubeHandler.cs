@@ -129,7 +129,7 @@ public class CubeHandler : MonoBehaviour
         obj.transform.localPosition = Vector3.zero;
         obj.transform.localRotation = Quaternion.identity;
 
-        float up = 2f + (0.5f * countOnCube - 0.5f);
+        float up = 2f + (0.5f * countOnCube - 1f);
 
         obj.transform.position += new Vector3(0f, up, 0f);
 

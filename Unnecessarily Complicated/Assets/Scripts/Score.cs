@@ -10,7 +10,7 @@ public class Score : MonoBehaviour
 
     private void Update()
     {
-        string scoreDisplayed = countOfSattPigsTotal + " fed pigs";
+        string scoreDisplayed = countOfSattPigsTotal + " saturated pigs";
 
         textElement.GetComponent<TMP_Text>().text = scoreDisplayed;
     }

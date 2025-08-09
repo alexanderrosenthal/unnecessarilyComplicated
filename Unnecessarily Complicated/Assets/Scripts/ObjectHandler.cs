@@ -61,11 +61,19 @@ public class ObjectHandler : MonoBehaviour
         }
         else
         {
-            //Debug.Log("Player give Object");
+            if (cubeHandler.objectsOnTop.Count <= cubeHandler.maxCountOnCube)
+            {
+                //Debug.Log("Player give Object");
 
-            objectsOnTopInt = objectsOnTopInt - 1;
-            HandleObjects(-1);
-            HandleCube(-1);
+                objectsOnTopInt = objectsOnTopInt - 1;
+                HandleObjects(-1);
+                HandleCube(-1);
+
+            }
+            else
+            {
+                Debug.Log("Stock full");
+            }
         }
     }
 
@@ -83,6 +91,7 @@ public class ObjectHandler : MonoBehaviour
 
             objectsOnTop.Remove(objectToDestroy);
             Destroy(objectToDestroy);
+            SpawnParticle(objectToDestroy);
         }
     }
     void PlaceRandomOnSphere()
@@ -105,10 +114,35 @@ public class ObjectHandler : MonoBehaviour
         obj.transform.SetParent(parent);
 
         objectsOnTop.Add(obj);
+
+        SpawnParticle(obj);
     }
 
     void HandleCube(int change)
     {
         cubeHandler.HandleInputOnCubePlayer(change, true);
+    }
+
+    public GameObject particlePrefab; // Dein Particle System Prefab
+
+    public void SpawnParticle(GameObject objectToDestroy)
+    {
+        Vector3 position = objectToDestroy.transform.position;
+        Quaternion rotation = Quaternion.identity;
+
+        GameObject particleInstance = Instantiate(particlePrefab, position, rotation);
+
+        // Falls es ein ParticleSystem hat → Dauer berechnen und danach zerstören
+        ParticleSystem ps = particleInstance.GetComponent<ParticleSystem>();
+        if (ps != null)
+        {
+            float totalDuration = ps.main.duration + ps.main.startLifetime.constantMax;
+            Destroy(particleInstance, totalDuration);
+        }
+        else
+        {
+            // Falls kein ParticleSystem dran ist → Sicherheitszerstörung nach 2s
+            Destroy(particleInstance, 2f);
+        }
     }
 }
