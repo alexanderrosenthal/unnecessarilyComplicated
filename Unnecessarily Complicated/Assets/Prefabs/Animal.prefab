@@ -1260,7 +1260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62242d0d85031724b8253bb61a1f30e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTime: 30
+  targetTime: 20
   partOfPigs:
   - {fileID: 2175766901543130220}
   - {fileID: 7821888265778658068}
