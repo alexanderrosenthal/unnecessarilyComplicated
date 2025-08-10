@@ -53,7 +53,7 @@ public class AnimalSpawn : MonoBehaviour
 
         maxPigsCount = maxPigsCount + 1;
 
-        Debug.Log("maxPigsCount " + maxPigsCount);
+        //Debug.Log("maxPigsCount " + maxPigsCount);
 
         int random = Random.Range(0, spawnPoints.Count);
 
@@ -67,12 +67,16 @@ public class AnimalSpawn : MonoBehaviour
             // Setze das Parent-Transform des Instanzierten Objekts
             instance.transform.SetParent(parent);
 
+            Debug.LogWarning("Vector3.zero + " + Vector3.zero);
+            Debug.LogWarning("Quaternion.identity + " + Quaternion.identity);
+            Debug.LogWarning("Vector3.one + " + Vector3.one);
+
             // Optional: Falls du die lokale Position/Rotation/Skalierung zurücksetzen möchtest:
             instance.transform.localPosition = Vector3.zero;
             instance.transform.localRotation = Quaternion.identity;
             instance.transform.localScale = Vector3.one;
 
-            instance.transform.GetChild(0).GetComponent<AnimalMovement>().home = parent;
+            instance.transform.GetChild(0).GetComponent<AnimalMovement>().home = parent.GetChild(1);
 
         }
         else

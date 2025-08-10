@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7872580138717288965}
   - component: {fileID: 7214595852873746034}
   m_Layer: 0
-  m_Name: Body
+  m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 2839959833107051882}
   - component: {fileID: 7437491213944998316}
   m_Layer: 0
-  m_Name: Nose
+  m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1179,8 +1179,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7403162792425770851}
   - component: {fileID: 7294204866771893850}
-  - component: {fileID: 830232363288935690}
   - component: {fileID: 771702076961631616}
+  - component: {fileID: 8090591975703924691}
   m_Layer: 0
   m_Name: Animal
   m_TagString: Untagged
@@ -1233,28 +1233,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &830232363288935690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7076573364877224512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62242d0d85031724b8253bb61a1f30e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTime: 30
-  partOfPigs:
-  - {fileID: 2175766901543130220}
-  - {fileID: 7821888265778658068}
-  - {fileID: 6900549509489867826}
-  - {fileID: 3271037161493627427}
-  - {fileID: 5227213442522413375}
-  - {fileID: 2247718310473122152}
-  - {fileID: 3167148878748936565}
-  - {fileID: 3217255979863288469}
 --- !u!114 &771702076961631616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1270,6 +1248,28 @@ MonoBehaviour:
   objectsOnTop: []
   objectsEatenInt: 0
   satt: 0
+--- !u!114 &8090591975703924691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7076573364877224512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62242d0d85031724b8253bb61a1f30e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTime: 20
+  partOfPigs:
+  - {fileID: 2175766901543130220}
+  - {fileID: 7821888265778658068}
+  - {fileID: 6900549509489867826}
+  - {fileID: 3271037161493627427}
+  - {fileID: 5227213442522413375}
+  - {fileID: 2247718310473122152}
+  - {fileID: 3167148878748936565}
+  - {fileID: 3217255979863288469}
 --- !u!1 &7821888265778658068
 GameObject:
   m_ObjectHideFlags: 0

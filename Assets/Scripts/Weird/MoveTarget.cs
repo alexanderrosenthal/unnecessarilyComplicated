@@ -5,15 +5,18 @@ using UnityEngine;
 public class MoveTarget : MonoBehaviour
 {
     public List<GameObject> Busches = new List<GameObject>();
+
     public Vector3[] targetPositions;
 
     Transform buschParent;
-    public float moveSpeed = 2f;  // Geschwindigkeit in Einheiten pro Sekunde
-
-    float movementValue = 1f;
-    float movementValueNegativ = -1f;
+    public float moveSpeed = 5f;  // Geschwindigkeit in Einheiten pro Sekunde
     public float lerpSpeed = 2f;
 
+    float movementValue = 20f;
+
+    float movementValueNEgativ = -20f;
+
+    // Start is called before the first frame update
     void Start()
     {
         buschParent = GameObject.Find("Spots").transform;
@@ -43,12 +46,15 @@ public class MoveTarget : MonoBehaviour
 
     void TriggerAction()
     {
+        // Startziele setzen
+        targetPositions = new Vector3[Busches.Count];
+
         for (int i = 0; i < Busches.Count; i++)
         {
-            float RandomX = Random.Range(movementValueNegativ, movementValue);
-            float RandomY = Random.Range(movementValueNegativ, movementValue);
+            float RandomX = Random.Range(movementValueNEgativ, movementValue);
+            float RandomZ = Random.Range(movementValueNEgativ, movementValue);
 
-            targetPositions[i] = Busches[i].transform.position + new Vector3(RandomX, 0, RandomY);
+            targetPositions[i] = Busches[i].transform.position + new Vector3(RandomX, 0, RandomZ);
         }
 
         // Bewege jeden Busch sanft zu seiner Zielposition
@@ -77,6 +83,6 @@ public class MoveTarget : MonoBehaviour
     void IntensityAction()
     {
         movementValue = movementValue + 1f;
-        movementValueNegativ = movementValueNegativ - 1f;
+        movementValueNEgativ = movementValueNEgativ - 1f;
     }
 }

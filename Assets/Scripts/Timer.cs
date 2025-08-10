@@ -7,8 +7,8 @@ public class SimpleTimer : MonoBehaviour
     public List<GameObject> potentialScripts = new List<GameObject>();
 
     public float targetTime = 30.0f;
-    private float countdown;           // interner Zähler
 
+    private float countdown;           // interner Zähler
     void Start()
     {
         countdown = targetTime; // Startwert setzen
@@ -24,6 +24,7 @@ public class SimpleTimer : MonoBehaviour
             countdown = targetTime; // Timer zurücksetzen
         }
     }
+
 
     void timerEnded()
     {

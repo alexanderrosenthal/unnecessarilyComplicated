@@ -6,6 +6,7 @@ public class GaterWeg : MonoBehaviour
 {
     public Transform gaterParent;
 
+    // Start is called before the first frame update
     void Start()
     {
         gaterParent = GameObject.Find("Gater_all").transform;
