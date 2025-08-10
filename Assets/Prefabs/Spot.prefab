@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 5742236502578277247}
   - component: {fileID: 4502876937856098459}
   m_Layer: 0
-  m_Name: Cylinder (1)
+  m_Name: Pillar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -437,7 +437,7 @@ GameObject:
   - component: {fileID: 3442115665955587855}
   - component: {fileID: 6537706842079083991}
   m_Layer: 0
-  m_Name: Cylinder (7)
+  m_Name: Pillar (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 6331247032637988564}
   - component: {fileID: 4453894602078666460}
   m_Layer: 0
-  m_Name: Cylinder (3)
+  m_Name: Pillar (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -603,7 +603,7 @@ GameObject:
   - component: {fileID: 7490071150651431960}
   - component: {fileID: 397187577934291029}
   m_Layer: 0
-  m_Name: Cylinder (10)
+  m_Name: Pillar (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -686,7 +686,7 @@ GameObject:
   - component: {fileID: 2350879481582299853}
   - component: {fileID: 1787580259109997793}
   m_Layer: 0
-  m_Name: Cylinder (7)
+  m_Name: Pillar (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -769,7 +769,7 @@ GameObject:
   - component: {fileID: 5167248689661516053}
   - component: {fileID: 8793897802634045037}
   m_Layer: 0
-  m_Name: Cylinder (7)
+  m_Name: Pillar (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -852,7 +852,7 @@ GameObject:
   - component: {fileID: 4228388747980200267}
   - component: {fileID: 1203917839140481891}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Pillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -933,7 +933,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6782846148502220594}
   m_Layer: 0
-  m_Name: 1 (3)
+  m_Name: Fence Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -952,6 +952,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 579952336921888988}
   - {fileID: 594518842590407161}
   - {fileID: 4417616261003584853}
   - {fileID: 402317439810623365}
@@ -963,7 +964,6 @@ Transform:
   - {fileID: 2532525258083247103}
   - {fileID: 6585920657907547613}
   - {fileID: 154517112335792398}
-  - {fileID: 579952336921888988}
   m_Father: {fileID: 1882787270039036718}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &639415831655086362
@@ -980,7 +980,7 @@ GameObject:
   - component: {fileID: 4078392474870253106}
   - component: {fileID: 5752352241039331548}
   m_Layer: 0
-  m_Name: CubeSpot
+  m_Name: Ground Plate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1113,7 +1113,7 @@ GameObject:
   - component: {fileID: 6217952336524098287}
   - component: {fileID: 3539995947486568242}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Pillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1196,7 +1196,7 @@ GameObject:
   - component: {fileID: 3230345255503219232}
   - component: {fileID: 8959726528372557048}
   m_Layer: 0
-  m_Name: Cylinder (8)
+  m_Name: Pillar (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1279,7 +1279,7 @@ GameObject:
   - component: {fileID: 4695493256408507927}
   - component: {fileID: 2219620683479930998}
   m_Layer: 0
-  m_Name: Cylinder (3)
+  m_Name: Pillar (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1362,7 +1362,7 @@ GameObject:
   - component: {fileID: 3226278234486762807}
   - component: {fileID: 1563419618929475443}
   m_Layer: 0
-  m_Name: Cylinder (1)
+  m_Name: Pillar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1445,7 +1445,7 @@ GameObject:
   - component: {fileID: 2565486921591998894}
   - component: {fileID: 2138855838346039518}
   m_Layer: 0
-  m_Name: Cylinder (8)
+  m_Name: Pillar (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1528,7 +1528,7 @@ GameObject:
   - component: {fileID: 5013377138821687425}
   - component: {fileID: 7607313399652042605}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Pillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1609,7 +1609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 563907466018718677}
   m_Layer: 0
-  m_Name: 1
+  m_Name: Fence Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1628,6 +1628,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8214073399982025089}
   - {fileID: 6910000374019549147}
   - {fileID: 1954557988677420213}
   - {fileID: 461555543383981075}
@@ -1639,7 +1640,6 @@ Transform:
   - {fileID: 7307266416414149324}
   - {fileID: 6757593114210542652}
   - {fileID: 2498357446898198324}
-  - {fileID: 8214073399982025089}
   m_Father: {fileID: 1882787270039036718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1847292801966005225
@@ -1654,7 +1654,7 @@ GameObject:
   - component: {fileID: 3823294688204822936}
   - component: {fileID: 6968337717684408857}
   m_Layer: 0
-  m_Name: Cylinder (3)
+  m_Name: Pillar (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1737,7 +1737,7 @@ GameObject:
   - component: {fileID: 1845725180605184015}
   - component: {fileID: 779180554081174428}
   m_Layer: 0
-  m_Name: Cylinder (4)
+  m_Name: Pillar (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1820,7 +1820,7 @@ GameObject:
   - component: {fileID: 2185076725912552626}
   - component: {fileID: 7583291789023295435}
   m_Layer: 0
-  m_Name: Cylinder (6)
+  m_Name: Pillar (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1903,7 +1903,7 @@ GameObject:
   - component: {fileID: 167373262265477749}
   - component: {fileID: 4816976256952736269}
   m_Layer: 0
-  m_Name: Cylinder (7)
+  m_Name: Pillar (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1986,7 +1986,7 @@ GameObject:
   - component: {fileID: 1108503424404652156}
   - component: {fileID: 5559680687239794394}
   m_Layer: 0
-  m_Name: Cylinder (4)
+  m_Name: Pillar (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2067,7 +2067,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5994207777101977465}
   m_Layer: 0
-  m_Name: 1 (1)
+  m_Name: FenceRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2086,6 +2086,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6438529422152740233}
   - {fileID: 7995631263481414973}
   - {fileID: 2133361067265451400}
   - {fileID: 649881115338467967}
@@ -2097,7 +2098,6 @@ Transform:
   - {fileID: 6298125668535985489}
   - {fileID: 9175154970275153608}
   - {fileID: 1229263672265667109}
-  - {fileID: 6438529422152740233}
   m_Father: {fileID: 1882787270039036718}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2720222423094790725
@@ -2112,7 +2112,7 @@ GameObject:
   - component: {fileID: 1997354276495751729}
   - component: {fileID: 8489250737460521247}
   m_Layer: 0
-  m_Name: Cylinder (2)
+  m_Name: Pillar (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2195,7 +2195,7 @@ GameObject:
   - component: {fileID: 8804973260949118336}
   - component: {fileID: 8589662922641414816}
   m_Layer: 0
-  m_Name: Cylinder (1)
+  m_Name: Pillar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2278,7 +2278,7 @@ GameObject:
   - component: {fileID: 4450350632781925616}
   - component: {fileID: 6608179100433917435}
   m_Layer: 0
-  m_Name: Balken
+  m_Name: Handrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2361,7 +2361,7 @@ GameObject:
   - component: {fileID: 2130678937839451810}
   - component: {fileID: 8132867274508449505}
   m_Layer: 0
-  m_Name: Cylinder (9)
+  m_Name: Pillar (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2475,7 +2475,7 @@ GameObject:
   - component: {fileID: 6393723331206573328}
   - component: {fileID: 8210575902072152645}
   m_Layer: 0
-  m_Name: Cylinder (10)
+  m_Name: Pillar (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2729,7 +2729,7 @@ GameObject:
   - component: {fileID: 2320431888481725321}
   - component: {fileID: 2705943040624373770}
   m_Layer: 0
-  m_Name: Balken
+  m_Name: Handrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2812,7 +2812,7 @@ GameObject:
   - component: {fileID: 1879402590615470308}
   - component: {fileID: 4946495214536633681}
   m_Layer: 0
-  m_Name: Cylinder (6)
+  m_Name: Pillar (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2895,7 +2895,7 @@ GameObject:
   - component: {fileID: 5520177580431042446}
   - component: {fileID: 2591767563000386976}
   m_Layer: 0
-  m_Name: Cylinder (5)
+  m_Name: Pillar (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2978,7 +2978,7 @@ GameObject:
   - component: {fileID: 7339477571327425829}
   - component: {fileID: 753319585353027777}
   m_Layer: 0
-  m_Name: Cylinder (8)
+  m_Name: Pillar (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3061,7 +3061,7 @@ GameObject:
   - component: {fileID: 1864588490431307536}
   - component: {fileID: 6692105087272283519}
   m_Layer: 0
-  m_Name: Cylinder (9)
+  m_Name: Pillar (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3144,7 +3144,7 @@ GameObject:
   - component: {fileID: 1624153450318434046}
   - component: {fileID: 2759448198766266772}
   m_Layer: 0
-  m_Name: Cylinder (5)
+  m_Name: Pillar (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3227,7 +3227,7 @@ GameObject:
   - component: {fileID: 148090710847893563}
   - component: {fileID: 1924866127037561339}
   m_Layer: 0
-  m_Name: Cylinder (5)
+  m_Name: Pillar (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3310,7 +3310,7 @@ GameObject:
   - component: {fileID: 647360976494471190}
   - component: {fileID: 362608251317607809}
   m_Layer: 0
-  m_Name: Cylinder (4)
+  m_Name: Pillar (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3581,9 +3581,9 @@ Transform:
   m_LocalScale: {x: 1.9143507, y: 0.9913372, z: 1.7507106}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5951356978829146046}
   - {fileID: 2124890170700305058}
   - {fileID: 7149366039342024226}
+  - {fileID: 5951356978829146046}
   - {fileID: 2821410569083128908}
   - {fileID: 1882787270039036718}
   m_Father: {fileID: 0}
@@ -3600,7 +3600,7 @@ GameObject:
   - component: {fileID: 4716422285553462524}
   - component: {fileID: 1620640784189809615}
   m_Layer: 0
-  m_Name: Balken
+  m_Name: Handrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3718,7 +3718,7 @@ GameObject:
   - component: {fileID: 8637723177395128073}
   - component: {fileID: 4461105061863665616}
   m_Layer: 0
-  m_Name: Cylinder (10)
+  m_Name: Pillar (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3801,7 +3801,7 @@ GameObject:
   - component: {fileID: 4838525305431686412}
   - component: {fileID: 8920839113881820361}
   m_Layer: 0
-  m_Name: Cylinder (1)
+  m_Name: Pillar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3884,7 +3884,7 @@ GameObject:
   - component: {fileID: 5125658981890758995}
   - component: {fileID: 4466266194033660737}
   m_Layer: 0
-  m_Name: Cylinder (9)
+  m_Name: Pillar (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3967,7 +3967,7 @@ GameObject:
   - component: {fileID: 2032183985635510444}
   - component: {fileID: 5963282681576110961}
   m_Layer: 0
-  m_Name: Balken
+  m_Name: Handrail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4050,7 +4050,7 @@ GameObject:
   - component: {fileID: 2245672363619981422}
   - component: {fileID: 4073020947274043664}
   m_Layer: 0
-  m_Name: Cylinder (9)
+  m_Name: Pillar (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4164,7 +4164,7 @@ GameObject:
   - component: {fileID: 6511484975563174545}
   - component: {fileID: 3399208708729394631}
   m_Layer: 0
-  m_Name: Cylinder (2)
+  m_Name: Pillar (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4247,7 +4247,7 @@ GameObject:
   - component: {fileID: 5122498273103704930}
   - component: {fileID: 2002857215540006202}
   m_Layer: 0
-  m_Name: Cylinder (5)
+  m_Name: Pillar (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4328,7 +4328,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6871456025533302256}
   m_Layer: 0
-  m_Name: 1 (2)
+  m_Name: Fence Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4347,6 +4347,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1105463290384278355}
   - {fileID: 2520812882308687519}
   - {fileID: 3633426610797840627}
   - {fileID: 2235714832403966499}
@@ -4358,7 +4359,6 @@ Transform:
   - {fileID: 531883290333648151}
   - {fileID: 686432404645311361}
   - {fileID: 1342753612216169000}
-  - {fileID: 1105463290384278355}
   m_Father: {fileID: 1882787270039036718}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &7446390497434214973
@@ -4373,7 +4373,7 @@ GameObject:
   - component: {fileID: 2603523977841882416}
   - component: {fileID: 3351654037298676695}
   m_Layer: 0
-  m_Name: Cylinder (2)
+  m_Name: Pillar (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4456,7 +4456,7 @@ GameObject:
   - component: {fileID: 5342155727628244020}
   - component: {fileID: 1392586133091913917}
   m_Layer: 0
-  m_Name: Cylinder (6)
+  m_Name: Pillar (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4539,7 +4539,7 @@ GameObject:
   - component: {fileID: 1274912236370821500}
   - component: {fileID: 3970057266099610645}
   m_Layer: 0
-  m_Name: Cylinder (2)
+  m_Name: Pillar (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4622,7 +4622,7 @@ GameObject:
   - component: {fileID: 2641971536695996728}
   - component: {fileID: 9182298887496304953}
   m_Layer: 0
-  m_Name: Cylinder (6)
+  m_Name: Pillar (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4705,7 +4705,7 @@ GameObject:
   - component: {fileID: 1077780516863313162}
   - component: {fileID: 4020886966633402295}
   m_Layer: 0
-  m_Name: Cylinder (4)
+  m_Name: Pillar (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4788,7 +4788,7 @@ GameObject:
   - component: {fileID: 190782107893880067}
   - component: {fileID: 416846537101732239}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Pillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4871,7 +4871,7 @@ GameObject:
   - component: {fileID: 2164677938963016935}
   - component: {fileID: 6872632318855458168}
   m_Layer: 0
-  m_Name: Cylinder (8)
+  m_Name: Pillar(8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4954,7 +4954,7 @@ GameObject:
   - component: {fileID: 7276882329674437790}
   - component: {fileID: 5048172717271959992}
   m_Layer: 0
-  m_Name: Cylinder (3)
+  m_Name: Pillar (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5037,7 +5037,7 @@ GameObject:
   - component: {fileID: 5246969601803919608}
   - component: {fileID: 8568699401837725847}
   m_Layer: 0
-  m_Name: Cylinder (10)
+  m_Name: Pillar (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5118,7 +5118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1882787270039036718}
   m_Layer: 0
-  m_Name: Rahmen
+  m_Name: Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5137,9 +5137,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6871456025533302256}
   - {fileID: 563907466018718677}
   - {fileID: 5994207777101977465}
-  - {fileID: 6871456025533302256}
   - {fileID: 6782846148502220594}
   m_Father: {fileID: 7361453648511089358}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

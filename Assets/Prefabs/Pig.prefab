@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7872580138717288965}
   - component: {fileID: 7214595852873746034}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -118,7 +118,7 @@ GameObject:
   - component: {fileID: 2839959833107051882}
   - component: {fileID: 7437491213944998316}
   m_Layer: 0
-  m_Name: Head
+  m_Name: Nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,7 +223,7 @@ GameObject:
   - component: {fileID: 8940339627140680555}
   - component: {fileID: 3552857485889918996}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Ear Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 244798102744843977}
   - component: {fileID: 7265744950469800446}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: Ear Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 6099149714421265308}
   - component: {fileID: 7428849805177585372}
   m_Layer: 0
-  m_Name: Noppy (4)
+  m_Name: Eye White Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -792,7 +792,7 @@ GameObject:
   - component: {fileID: 7834958796155141242}
   - component: {fileID: 8855564394306958220}
   m_Layer: 0
-  m_Name: Noppy (5)
+  m_Name: Eye White Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -876,7 +876,7 @@ GameObject:
   - component: {fileID: 6949044156657955354}
   - component: {fileID: 8767917240225825938}
   m_Layer: 0
-  m_Name: Noppy (3)
+  m_Name: Eye Black Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1182,7 +1182,7 @@ GameObject:
   - component: {fileID: 771702076961631616}
   - component: {fileID: 8090591975703924691}
   m_Layer: 0
-  m_Name: Animal
+  m_Name: Pig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1387,7 +1387,7 @@ GameObject:
   - component: {fileID: 3726528560281204179}
   - component: {fileID: 8487698283240149721}
   m_Layer: 0
-  m_Name: Noppy (3)
+  m_Name: Eye Black Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

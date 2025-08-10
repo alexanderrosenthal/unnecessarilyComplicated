@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7491144844429804925}
   - component: {fileID: 20154747272330998}
   m_Layer: 0
-  m_Name: Transfer
+  m_Name: Hay Basic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

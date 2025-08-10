@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7491144844429804925}
   - component: {fileID: 20154747272330998}
   m_Layer: 0
-  m_Name: TransferPlayer
+  m_Name: Hay Transfer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 4510082567373993770}
   - component: {fileID: 187038826842854824}
   m_Layer: 0
-  m_Name: Kordel
+  m_Name: Cord
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
