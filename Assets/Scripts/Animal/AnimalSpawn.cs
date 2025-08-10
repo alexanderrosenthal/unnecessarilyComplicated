@@ -13,6 +13,7 @@ public class AnimalSpawn : MonoBehaviour
     public float minSpawnInterval = 0.5f;  // minimale Wartezeit in Sekunden
     public float maxSpawnInterval = 2f;    // maximale Wartezeit in Sekunden
 
+    //BASICS
     void Start()
     {
         //Stellt Liste der Spawnpoints zusammen
@@ -24,6 +25,7 @@ public class AnimalSpawn : MonoBehaviour
         StartCoroutine(TriggerRoutine());
     }
 
+    //INDIVIDUAL
     IEnumerator TriggerRoutine()
     {
         while (true)

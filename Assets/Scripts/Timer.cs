@@ -7,6 +7,7 @@ public class SimpleTimer : MonoBehaviour
     public float targetTime = 30.0f;
     private float countdown;           // interner Zähler
 
+    //------------------- BASICS ---------------------------------------------------------
     void Start()
     {
         countdown = targetTime; // Startwert setzen
@@ -23,6 +24,7 @@ public class SimpleTimer : MonoBehaviour
         }
     }
 
+    //------------------- INDIVIDUALS ---------------------------------------------------------
     void timerEnded()
     {
         int random = Random.Range(0, potentialScripts.Count);

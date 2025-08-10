@@ -19,6 +19,7 @@ public class CubeHandler : MonoBehaviour
     public float minInterval = 0.1f;  // minimale Wartezeit in Sekunden
     public float maxInterval = 0.2f;    // maximale Wartezeit in Sekunden
 
+    //------------------- BASICS ---------------------------------------------------------
     private void Start()
     {
         for (int i = 0; i < countOnCube; i++)
@@ -40,7 +41,16 @@ public class CubeHandler : MonoBehaviour
         StartCoroutine(TriggerRoutine());
     }
 
-    //WACHSTUM
+    private void Update()
+    {
+        HandleTreeSize();
+        HandleText();
+    }
+
+
+    //------------------- INDIVIDUALS ---------------------------------------------------------
+
+    //------------------- WACHSTUM ---------------------------------------------------------
     IEnumerator TriggerRoutine()
     {
         while (true)
@@ -62,7 +72,7 @@ public class CubeHandler : MonoBehaviour
         }
     }
 
-    //ÜBER PLAYER
+    //------------------- ÜBER PLAYER ---------------------------------------------------------
     public void HandleInputOnCubePlayer(int changeInCount, bool figureOnIT)
     {
         localChangeInCount = changeInCount;
@@ -132,13 +142,7 @@ public class CubeHandler : MonoBehaviour
         objectsOnTop.Add(obj);
     }
 
-    //TEXT
-    private void Update()
-    {
-        HandleTreeSize();
-        HandleText();
-    }
-
+    //------------------- TEXT ---------------------------------------------------------
     void HandleText()
     {
         string textToChange = countOnCube.ToString();

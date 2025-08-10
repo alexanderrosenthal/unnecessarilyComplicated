@@ -8,6 +8,7 @@ public class BallController : MonoBehaviour
     private float inputX;
     private float inputZ;
 
+    //------------------- BASICS ---------------------------------------------------------
     void Start()
     {
         if (rig != null)

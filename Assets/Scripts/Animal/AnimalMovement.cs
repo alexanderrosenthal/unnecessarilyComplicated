@@ -11,6 +11,7 @@ public class AnimalMovement : MonoBehaviour
     public bool onTheWayTowards = true;
     public List<Transform> potentialTargets = new List<Transform>();
 
+    //BASICS
     void Start()
     {
         Transform spotsT = GameObject.Find("Spots").transform;
@@ -37,9 +38,9 @@ public class AnimalMovement : MonoBehaviour
 
             // Schrittweite pro Frame
             float step = moveSpeed * Time.deltaTime;
- 
+
             // Bewege das Objekt gleichmäßig in Richtung Ziel
-            animal.position =Vector3.MoveTowards(transform.position, target.position, step);
+            animal.position = Vector3.MoveTowards(transform.position, target.position, step);
 
             animalBody.LookAt(target);
         }

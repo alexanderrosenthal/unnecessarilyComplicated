@@ -12,11 +12,12 @@ public class ObjectHandler : MonoBehaviour
     Collision thisCollision;
     CubeHandler cubeHandler;
 
+    //------------------- INDIVIDUALS ---------------------------------------------------------
     void OnCollisionEnter(Collision collision)
     {
         thisCollision = collision;
 
-        if (collision.gameObject.name.Contains("CubeSpot"))
+        if (collision.gameObject.name.Contains("Ground Plate"))
         {
             cubeHandler = collision.gameObject.transform.GetComponent<CubeHandler>();
 

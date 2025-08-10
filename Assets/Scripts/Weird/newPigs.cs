@@ -12,12 +12,14 @@ public class newPigs : MonoBehaviour
     public float minZ = -10f;
     public float maxZ = 10f;
 
+    //------------------- BASICS ---------------------------------------------------------
     void Start()
     {
 
         StartCoroutine(TriggerRoutine());
     }
 
+    //------------------- INDIVIDUALS ---------------------------------------------------------
     IEnumerator TriggerRoutine()
     {
         while (true)

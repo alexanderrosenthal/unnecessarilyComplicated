@@ -4,6 +4,7 @@ public class Startscreen : MonoBehaviour
 {
     public Transform ScoreUI;
 
+    //------------------- BASICS ---------------------------------------------------------
     public void Awake()
     {
         for (int i = 0; i < transform.childCount; i++)
@@ -12,6 +13,7 @@ public class Startscreen : MonoBehaviour
         }
     }
 
+    //------------------- INDIVIDUALS ---------------------------------------------------------
     public void deaktivierenStartUI()
     {
         for (int i = 0; i < transform.childCount; i++)

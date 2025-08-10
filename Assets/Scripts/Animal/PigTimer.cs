@@ -8,6 +8,7 @@ public class PigTimer : MonoBehaviour
     public List<GameObject> partOfPigs = new List<GameObject>();
     GameObject AnimalSpawn;
 
+    //BASICS
     void Start()
     {
         countdown = targetTime; // Startwert setzen
@@ -26,6 +27,7 @@ public class PigTimer : MonoBehaviour
         }
     }
 
+    //------------------- INDIVIDUALS ---------------------------------------------------------
     void timerEnded()
     {
         if (!gameObject.GetComponent<FoodHandler>().satt)

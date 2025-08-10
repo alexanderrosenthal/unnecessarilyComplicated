@@ -4,10 +4,10 @@ public class GaterWeg : MonoBehaviour
 {
     public Transform gaterParent;
 
-    // Start is called before the first frame update
+    //------------------- BASICS ---------------------------------------------------------
     void Start()
     {
-        gaterParent = GameObject.Find("Gater_all").transform;
+        gaterParent = GameObject.Find("Fences all").transform;
 
         //Stellt Liste der Spawnpoints zusammen
         for (int i = 0; i < gaterParent.childCount; i++)

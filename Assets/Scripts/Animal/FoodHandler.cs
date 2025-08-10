@@ -8,19 +8,7 @@ public class FoodHandler : MonoBehaviour
     bool colliding = false;
     public bool satt;
 
-    void OnCollisionEnter(Collision collision)
-    {
-        thisCollision = collision;
-
-        if (collision.gameObject.name.Contains("CubeSpot"))
-        {
-            //Debug.Log("Animal collission");
-            colliding = true;
-
-            cubeHandler = collision.gameObject.transform.GetComponent<CubeHandler>();
-        }
-    }
-
+    //------------------- BASICS ---------------------------------------------------------
     void Update()
     {
         if (objectsEatenInt > 1)
@@ -32,6 +20,20 @@ public class FoodHandler : MonoBehaviour
         if (colliding && cubeHandler.countOnCube > 0 && !satt)
         {
             AnimalTakingObject();
+        }
+    }
+
+    //------------------- INDIVIDUAL ---------------------------------------------------------
+    void OnCollisionEnter(Collision collision)
+    {
+        thisCollision = collision;
+
+        if (collision.gameObject.name.Contains("Ground Plate"))
+        {
+            //Debug.Log("Animal collission");
+            colliding = true;
+
+            cubeHandler = collision.gameObject.transform.GetComponent<CubeHandler>();
         }
     }
 

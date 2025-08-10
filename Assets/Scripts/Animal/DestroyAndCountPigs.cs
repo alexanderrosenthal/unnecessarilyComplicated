@@ -5,12 +5,14 @@ public class DestroyAndCountPigs : MonoBehaviour
     GameObject AnimalSpawn;
     GameObject Score;
 
+    //------------------- BASICS ---------------------------------------------------------
     private void Start()
     {
         Score = GameObject.Find("Score");
         AnimalSpawn = GameObject.Find("Animals");
     }
 
+    //------------------- INDIVIDUAL ---------------------------------------------------------
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name.Contains("Animal"))

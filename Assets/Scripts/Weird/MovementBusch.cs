@@ -11,9 +11,10 @@ public class MovementBusch : MonoBehaviour
     float movementValue = 20f;
     float movementValueNEgativ = -20f;
 
+    //------------------- BASICS ---------------------------------------------------------
     void Start()
     {
-        buschParent = GameObject.Find("Büsche").transform;
+        buschParent = GameObject.Find("Bushes").transform;
 
         //Stellt Liste der Spawnpoints zusammen
         for (int i = 0; i < buschParent.childCount; i++)
@@ -25,6 +26,7 @@ public class MovementBusch : MonoBehaviour
         StartCoroutine(IntensityRoutine());
     }
 
+    //------------------- INDIVIDUALS ---------------------------------------------------------
     IEnumerator TriggerRoutine()
     {
         while (true)

@@ -11,6 +11,7 @@ public class MoveTarget : MonoBehaviour
     float movementValue = 20f;
     float movementValueNEgativ = -20f;
 
+    //------------------- BASICS ---------------------------------------------------------
     void Start()
     {
         buschParent = GameObject.Find("Spots").transform;
@@ -25,6 +26,7 @@ public class MoveTarget : MonoBehaviour
         StartCoroutine(IntensityRoutine());
     }
 
+    //------------------- INDIVIDUALS ---------------------------------------------------------
     IEnumerator TriggerRoutine()
     {
         while (true)
