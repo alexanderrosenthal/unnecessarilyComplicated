@@ -6,15 +6,10 @@ public class AnimalSpawn : MonoBehaviour
 {
     public GameObject prefab;   // Das Prefab, das instanziert werden soll
     public Transform parent;    // Das Parent-Objekt, unter dem das neue Objekt liegen soll
-
     public int maxPigs = 5;
-
     public int maxPigsCount = 0;
-
     public Transform spawnParent;
     public List<Transform> spawnPoints = new List<Transform>();
-
-
     public float minSpawnInterval = 0.5f;  // minimale Wartezeit in Sekunden
     public float maxSpawnInterval = 2f;    // maximale Wartezeit in Sekunden
 
@@ -49,7 +44,6 @@ public class AnimalSpawn : MonoBehaviour
             Debug.Log("no more pigs");
             return;
         }
-
 
         maxPigsCount = maxPigsCount + 1;
 

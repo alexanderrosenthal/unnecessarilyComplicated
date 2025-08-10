@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimalCollission : MonoBehaviour
@@ -10,7 +8,6 @@ public class AnimalCollission : MonoBehaviour
     {
         thisCollision = collision;
         CubeHandler cubeHandler;
-
 
         if (collision.gameObject.name.Contains("CubeSpot"))
         {

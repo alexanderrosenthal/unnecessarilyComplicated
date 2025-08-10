@@ -1,12 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 
 public class DestroyAndCountPigs : MonoBehaviour
 {
-
-    int countOfSattPigsHere;
     GameObject AnimalSpawn;
     GameObject Score;
 
@@ -14,7 +9,6 @@ public class DestroyAndCountPigs : MonoBehaviour
     {
         Score = GameObject.Find("Score");
         AnimalSpawn = GameObject.Find("Animals");
-
     }
 
     void OnCollisionEnter(Collision collision)

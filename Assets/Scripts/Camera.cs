@@ -4,10 +4,9 @@ public class FollowCamera : MonoBehaviour
 {
     public Transform target;
     public float smoothSpeed = 0.125f;
-
     // Offset für schrägen Blick von oben rechts
     public Vector3 offset = new Vector3(3f, 7f, -10f);
-
+    
     void LateUpdate()
     {
         if (target == null) return;

@@ -1,21 +1,16 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class newPigs : MonoBehaviour
 {
     public GameObject prefab;   // Das Prefab, das instanziert werden soll   F
     public Transform parent;
-
-    public Transform target;
     public float minSpawnInterval = 0.5f;  // minimale Wartezeit in Sekunden
-    public float maxSpawnInterval = 2f;    // maximale Wartezeit in SekundenF
-
+    public float maxSpawnInterval = 2f;    // maximale Wartezeit in Sekunden
     public float minX = -10f;
     public float maxX = 10f;
     public float minZ = -10f;
     public float maxZ = 10f;
-    public float yLevel = 0f; // Höhe in der Ebene
 
     void Start()
     {

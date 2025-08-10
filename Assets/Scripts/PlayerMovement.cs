@@ -3,11 +3,8 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     public Rigidbody rig;
-
-    [Header("Settings")]
     public float turnTorque = 5f;   // Drehmoment für links/rechts
     public float moveForce = 10f;   // Vortriebskraft vor/zurück
-
     private float inputX;
     private float inputZ;
 

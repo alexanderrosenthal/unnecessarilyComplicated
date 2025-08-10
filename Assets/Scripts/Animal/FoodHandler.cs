@@ -1,16 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FoodHandler : MonoBehaviour
 {
-    public List<GameObject> objectsOnTop = new List<GameObject>();
-
     public int objectsEatenInt = 0;
-
     Collision thisCollision;
     CubeHandler cubeHandler;
-
     bool colliding = false;
     public bool satt;
 
@@ -40,7 +34,6 @@ public class FoodHandler : MonoBehaviour
             AnimalTakingObject();
         }
     }
-
 
     public void AnimalTakingObject()
     {

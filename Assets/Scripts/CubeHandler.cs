@@ -5,21 +5,17 @@ using TMPro;
 
 public class CubeHandler : MonoBehaviour
 {
+    public GameObject prefab;
+    public Transform parent;
     public List<GameObject> objectsOnTop = new List<GameObject>();
+    public List<GameObject> TextComponents;
     public bool givingOutput;
     public bool takingInput;
     public int maxCountOnCube = 5;
     public int countOnCube = 1;
     public int localChangeInCount = 1;
-
     [SerializeField] private Vector3 startScale = Vector3.one; // Unterschiedliche Startgrößen für X, Y, Z
-    [SerializeField] private float scaleFactor = 0.9f;         // Gleicher Faktor für alle Achsen
-
-    public GameObject prefab;
-    public Transform parent;
-
-    public List<GameObject> TextComponents;
-
+    [SerializeField] private float scaleFactor = 0.9f; // Gleicher Faktor für alle Achsen
     public float minInterval = 0.1f;  // minimale Wartezeit in Sekunden
     public float maxInterval = 0.2f;    // maximale Wartezeit in Sekunden
 
@@ -135,7 +131,6 @@ public class CubeHandler : MonoBehaviour
 
         objectsOnTop.Add(obj);
     }
-
 
     //TEXT
     private void Update()

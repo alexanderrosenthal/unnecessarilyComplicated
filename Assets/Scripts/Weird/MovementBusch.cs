@@ -5,18 +5,12 @@ using UnityEngine;
 public class MovementBusch : MonoBehaviour
 {
     public List<GameObject> Busches = new List<GameObject>();
-
     public Vector3[] targetPositions;
-
     Transform buschParent;
-    public float moveSpeed = 5f;  // Geschwindigkeit in Einheiten pro Sekunde
     public float lerpSpeed = 2f;
-
     float movementValue = 20f;
-
     float movementValueNEgativ = -20f;
 
-    // Start is called before the first frame update
     void Start()
     {
         buschParent = GameObject.Find("Büsche").transform;

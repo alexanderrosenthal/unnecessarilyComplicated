@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,7 +6,6 @@ public class PigTimer : MonoBehaviour
     public float targetTime = 240.0f;
     private float countdown;           // interner Zähler
     public List<GameObject> partOfPigs = new List<GameObject>();
-
     GameObject AnimalSpawn;
 
     void Start()
@@ -27,7 +25,6 @@ public class PigTimer : MonoBehaviour
             countdown = targetTime; // Timer zurücksetzen
         }
     }
-
 
     void timerEnded()
     {

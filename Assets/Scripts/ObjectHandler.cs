@@ -1,17 +1,14 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectHandler : MonoBehaviour
 {
     public List<GameObject> objectsOnTop = new List<GameObject>();
-
     public GameObject prefab;
+    public GameObject particlePrefab; // Dein Particle System Prefab
     public Transform parent;
     public Transform sphere;
-
     public int objectsOnTopInt = 0;
-
     Collision thisCollision;
     CubeHandler cubeHandler;
 
@@ -122,8 +119,6 @@ public class ObjectHandler : MonoBehaviour
     {
         cubeHandler.HandleInputOnCubePlayer(change, true);
     }
-
-    public GameObject particlePrefab; // Dein Particle System Prefab
 
     public void SpawnParticle(GameObject objectToDestroy)
     {

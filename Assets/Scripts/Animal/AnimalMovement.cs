@@ -8,9 +8,7 @@ public class AnimalMovement : MonoBehaviour
     public Transform animal;
     public Transform animalBody;
     public float moveSpeed = 5f;  // Geschwindigkeit in Einheiten pro Sekunde
-
     public bool onTheWayTowards = true;
-
     public List<Transform> potentialTargets = new List<Transform>();
 
     void Start()
