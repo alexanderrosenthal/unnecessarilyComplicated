@@ -6,12 +6,15 @@ public class MovementBusch : MonoBehaviour
 {
     public List<GameObject> Busches = new List<GameObject>();
 
+    public Vector3[] targetPositions;
+
     Transform buschParent;
     public float moveSpeed = 5f;  // Geschwindigkeit in Einheiten pro Sekunde
+    public float lerpSpeed = 2f;
 
-    float movementValue = 1f;
+    float movementValue = 20f;
 
-    float movementValueNEgativ = -1f;
+    float movementValueNEgativ = -20f;
 
     // Start is called before the first frame update
     void Start()
@@ -43,12 +46,25 @@ public class MovementBusch : MonoBehaviour
 
     void TriggerAction()
     {
+        // Startziele setzen
+        targetPositions = new Vector3[Busches.Count];
+
         for (int i = 0; i < Busches.Count; i++)
         {
             float RandomX = Random.Range(movementValueNEgativ, movementValue);
             float RandomZ = Random.Range(movementValueNEgativ, movementValue);
 
-            Busches[i].transform.position = Busches[i].transform.position + new Vector3(RandomX, 0, RandomZ);
+            targetPositions[i] = Busches[i].transform.position + new Vector3(RandomX, 0, RandomZ);
+        }
+
+        // Bewege jeden Busch sanft zu seiner Zielposition
+        for (int i = 0; i < Busches.Count; i++)
+        {
+            Busches[i].transform.position = Vector3.Lerp(
+                Busches[i].transform.position,
+                targetPositions[i],
+                Time.deltaTime * lerpSpeed
+            );
         }
     }
 

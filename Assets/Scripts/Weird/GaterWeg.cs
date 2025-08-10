@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GaterWeg : MonoBehaviour
+{
+    public Transform gaterParent;
+
+    void Start()
+    {
+        gaterParent = GameObject.Find("Gater_all").transform;
+
+        //Stellt Liste der Spawnpoints zusammen
+        for (int i = 0; i < gaterParent.childCount; i++)
+        {
+            gaterParent.GetChild(i).gameObject.SetActive(false);
+        }
+    }
+}
