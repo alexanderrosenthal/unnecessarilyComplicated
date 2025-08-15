@@ -13,10 +13,14 @@ public class AnimalSpawn : MonoBehaviour
     [Header("LevelSetup")]
     public GameObject prefab;   // Das Prefab, das instanziert werden soll
     public Transform animalParent;    // Das Parent-Objekt, unter dem das neue Objekt liegen soll
-    private Transform spawnPosition;
 
     [Header("By Code")]
-    public Transform spawnParent; public List<Transform> listOfSpawns = new List<Transform>();
+    public Transform spawnParent;
+    public List<Transform> listOfSpawns = new();
+
+    //PRIVATE
+    private Transform spawnPosition;
+
 
     //------------------- BASICS ---------------------------------------------------------
     void Start()
@@ -74,11 +78,11 @@ public class AnimalSpawn : MonoBehaviour
             return false;
         }
 
-        maxPigsCount = maxPigsCount + 1;
+        maxPigsCount++;
 
         return true;
     }
-    
+
     private void ChooseSpawn()
     {
         int random = Random.Range(0, listOfSpawns.Count - 1);

@@ -16,9 +16,9 @@ public class AnimalMovement : MonoBehaviour
     {
         Transform spotsT = GameObject.Find("Spots").transform;
 
-        int random = Random.Range(0, spotsT.GetComponent<SpotHandler>().takingInputTargets.Count);
+        int random = Random.Range(0, spotsT.GetComponent<SpotsHandler>().takingInputTargets.Count);
         //Zielt auf den AnimalContacter und mag den gesamt Spot nicht (Y-Position?)
-        target = spotsT.GetComponent<SpotHandler>().takingInputTargets[random].GetChild(0);
+        target = spotsT.GetComponent<SpotsHandler>().takingInputTargets[random].GetChild(0);
     }
 
     void Update()

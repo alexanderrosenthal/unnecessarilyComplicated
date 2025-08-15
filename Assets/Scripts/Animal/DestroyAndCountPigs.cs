@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class DestroyAndCountPigs : MonoBehaviour
 {
-    GameObject AnimalSpawn;
-    GameObject Score;
+    //PRIVATE
+    private GameObject AnimalSpawn;
+    private GameObject Score;
 
     //------------------- BASICS ---------------------------------------------------------
     private void Start()

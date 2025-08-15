@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class GaterWeg : MonoBehaviour
 {
+    [Header("LevelSetup")]
     public Transform gaterParent;
 
     //------------------- BASICS ---------------------------------------------------------

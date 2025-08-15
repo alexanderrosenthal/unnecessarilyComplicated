@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class newPigs : MonoBehaviour
 {
+
+    /// <summary>
+    ///NOT IN USE CURRENTLY
+    /// </summary>
+
     public GameObject prefab;   // Das Prefab, das instanziert werden soll   F
     public Transform parent;
     public float minSpawnInterval = 0.5f;  // minimale Wartezeit in Sekunden

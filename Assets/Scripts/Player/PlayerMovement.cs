@@ -8,6 +8,8 @@ public class BallController : MonoBehaviour
 
     [Header("PrefabSetup")]
     public Rigidbody rig;
+
+    //PRIVATE
     private float inputX;
     private float inputZ;
 

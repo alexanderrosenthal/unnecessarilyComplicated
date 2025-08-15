@@ -7,9 +7,9 @@ public class SimpleTimer : MonoBehaviour
     public float targetTime = 30.0f;
 
     [Header("LevelSetup")]
-    public List<GameObject> potentialScripts = new List<GameObject>();
+    public List<GameObject> potentialScripts = new();
 
-    [Header("By Code")]
+    //PRIVATE
     private float countdown;           // interner Zähler
 
     //------------------- BASICS ---------------------------------------------------------
@@ -32,12 +32,10 @@ public class SimpleTimer : MonoBehaviour
     //------------------- INDIVIDUALS ---------------------------------------------------------
     void timerEnded()
     {
-        int random = Random.Range(0, potentialScripts.Count);
-
         for (int i = 0; i < potentialScripts.Count; i++)
         {
             potentialScripts[i].SetActive(true);
         }
-        targetTime = targetTime + targetTime;
+        targetTime += targetTime;
     }
 }

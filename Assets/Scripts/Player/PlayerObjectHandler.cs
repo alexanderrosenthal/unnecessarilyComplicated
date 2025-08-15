@@ -3,23 +3,26 @@ using UnityEngine;
 
 public class ObjectHandler : MonoBehaviour
 {
-    public List<GameObject> objectsOnTop = new List<GameObject>();
+    [Header("PrefabSetup")]
     public GameObject prefab;
     public GameObject particlePrefab; // Dein Particle System Prefab
     public Transform parent;
     public Transform sphere;
+
+    [Header("By Code")]
     public int objectsOnTopInt = 0;
-    Collision thisCollision;
-    CubeHandler cubeHandler;
+
+    //PRIVATE
+    private SpotHandler spotHandler;
+    private List<GameObject> objectsOnTop = new();
+
 
     //------------------- INDIVIDUALS ---------------------------------------------------------
     void OnCollisionEnter(Collision collision)
     {
-        thisCollision = collision;
-
-        if (collision.gameObject.name.Contains("Ground Plate"))
+        if (collision.gameObject.name.Contains("Spot"))
         {
-            cubeHandler = collision.gameObject.transform.GetComponent<CubeHandler>();
+            spotHandler = collision.transform.GetComponent<SpotHandler>();
 
             HandlePlayer();
         }
@@ -27,11 +30,11 @@ public class ObjectHandler : MonoBehaviour
 
     void HandlePlayer()
     {
-        if (cubeHandler.takingInput)
+        if (spotHandler.takingInput)
         {
             PlayerGivingObject();
         }
-        if (cubeHandler.givingOutput && cubeHandler.countOnCube > 0)
+        if (spotHandler.givingOutput && spotHandler.countOnCube > 0)
         {
             PlayerTakingObject();
         }
@@ -43,8 +46,7 @@ public class ObjectHandler : MonoBehaviour
 
     public void PlayerTakingObject()
     {
-        //Debug.Log("Player take Object");
-        objectsOnTopInt = objectsOnTopInt + 1;
+        objectsOnTopInt++;
 
         HandleObjects(1);
 
@@ -59,11 +61,9 @@ public class ObjectHandler : MonoBehaviour
         }
         else
         {
-            if (cubeHandler.objectsOnTop.Count <= cubeHandler.maxCountOnCube)
+            if (spotHandler.objectsOnTop.Count <= spotHandler.maxCountOnCube)
             {
-                //Debug.Log("Player give Object");
-
-                objectsOnTopInt = objectsOnTopInt - 1;
+                objectsOnTopInt--;
                 HandleObjects(-1);
                 HandleCube(-1);
 
@@ -116,9 +116,9 @@ public class ObjectHandler : MonoBehaviour
         SpawnParticle(obj);
     }
 
-    void HandleCube(int change)
+    void HandleCube(int ValueOfChange)
     {
-        cubeHandler.HandleInputOnCubePlayer(change, true);
+        spotHandler.ChangeByPlayer(ValueOfChange);
     }
 
     public void SpawnParticle(GameObject objectToDestroy)

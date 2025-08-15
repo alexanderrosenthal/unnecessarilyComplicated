@@ -2,11 +2,15 @@ using UnityEngine;
 
 public class FoodHandler : MonoBehaviour
 {
+    [Header("GameDesign")]
     public int objectsEatenInt = 0;
-    private Collision thisCollision;
-    CubeHandler cubeHandler;
-    bool colliding = false;
+
+    [Header("By Code")]
     public bool satt;
+
+    //PRIVATE
+    private SpotHandler cubeHandler;
+    private bool colliding = false;
 
     //------------------- BASICS ---------------------------------------------------------
     void Update()
@@ -29,26 +33,24 @@ public class FoodHandler : MonoBehaviour
     //------------------- INDIVIDUAL ---------------------------------------------------------
     void OnCollisionEnter(Collision collision)
     {
-        thisCollision = collision;
-
-        if (collision.gameObject.name.Contains("Ground Plate"))
+        if (collision.gameObject.name.Contains("Spot"))
         {
             //Debug.Log("Animal collission");
             colliding = true;
 
-            cubeHandler = collision.gameObject.transform.GetComponent<CubeHandler>();
+            cubeHandler = collision.gameObject.transform.GetComponent<SpotHandler>();
         }
     }
 
     public void AnimalTakingObject()
     {
-        objectsEatenInt = objectsEatenInt + 1;
+        objectsEatenInt++;
 
         HandleCube(1);
     }
 
     void HandleCube(int change)
     {
-        cubeHandler.HandleInputOnCubePig(change, true);
+        cubeHandler.ChangeByPig(change, true);
     }
 }

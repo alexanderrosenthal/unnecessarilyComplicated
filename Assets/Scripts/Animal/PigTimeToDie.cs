@@ -7,8 +7,9 @@ public class PigTimer : MonoBehaviour
     public float targetTime = 240.0f;
 
     [Header("PrefabSetup")]
-    public List<GameObject> partOfPigs = new List<GameObject>();
+    public List<GameObject> partOfPigs = new();
 
+    //PRIVATE
     private float countdown;           // interner Zähler
     private GameObject Spawns;
 
