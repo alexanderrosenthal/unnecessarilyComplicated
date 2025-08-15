@@ -165,12 +165,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2144803776201820916}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!1 &227242780832384352
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,12 +419,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 7158845830727785089}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!1 &300098292669236927
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,7 +975,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5951356978829146046}
-  - component: {fileID: 5816619813960385085}
   - component: {fileID: 812738054364730287}
   - component: {fileID: 4078392474870253106}
   - component: {fileID: 5752352241039331548}
@@ -1001,35 +1000,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7361453648511089358}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5816619813960385085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 639415831655086362}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8be1bc0b9ca563d409b1d44c0e72dc62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsOnTop: []
-  givingOutput: 0
-  takingInput: 0
-  maxCountOnCube: 5
-  countOnCube: 1
-  localChangeInCount: 1
-  startScale: {x: 1.8, y: 1, z: 1.8}
-  scaleFactor: 0.9
-  prefab: {fileID: 838452435976121620, guid: 1511d456b61598040aa2264039723fcf, type: 3}
-  parent: {fileID: 7149366039342024226}
-  TextComponents:
-  - {fileID: 4968404654208015329}
-  - {fileID: 290897787158928990}
-  - {fileID: 6629389331268667}
-  - {fileID: 3965259309596659299}
-  minInterval: 0.1
-  maxInterval: 0.2
 --- !u!33 &812738054364730287
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2711,12 +2681,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 3677493245793498699}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!1 &3973719077158731554
 GameObject:
   m_ObjectHideFlags: 0
@@ -3546,12 +3516,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2393347809231592662}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!1 &5325572391540831618
 GameObject:
   m_ObjectHideFlags: 0
@@ -3561,6 +3531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7361453648511089358}
+  - component: {fileID: 3872199574802540183}
   m_Layer: 0
   m_Name: Spot
   m_TagString: Untagged
@@ -3588,6 +3559,35 @@ Transform:
   - {fileID: 1882787270039036718}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3872199574802540183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5325572391540831618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be1bc0b9ca563d409b1d44c0e72dc62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 838452435976121620, guid: 1511d456b61598040aa2264039723fcf, type: 3}
+  parent: {fileID: 7149366039342024226}
+  objectsOnTop: []
+  TextComponents:
+  - {fileID: 4968404654208015329}
+  - {fileID: 290897787158928990}
+  - {fileID: 6629389331268667}
+  - {fileID: 3965259309596659299}
+  givingOutput: 0
+  takingInput: 0
+  maxCountOnCube: 5
+  countOnCube: 1
+  localChangeInCount: 1
+  startScale: {x: 1.8, y: 1, z: 1.8}
+  scaleFactor: 0.9
+  minInterval: 0.1
+  maxInterval: 0.2
 --- !u!1 &5372204927457471301
 GameObject:
   m_ObjectHideFlags: 0

@@ -1013,57 +1013,6 @@ Transform:
   - {fileID: 7341884701062586645}
   m_Father: {fileID: 2272553690326108419}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5953659883307809682
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6796868153639470982}
-  - component: {fileID: 4405487314068238081}
-  m_Layer: 0
-  m_Name: AnimalMovement
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6796868153639470982
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5953659883307809682}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7403162792425770851}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4405487314068238081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5953659883307809682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3fa3db6e7b5f6d45a849ecbfbca7a17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  home: {fileID: 0}
-  animal: {fileID: 7403162792425770851}
-  animalBody: {fileID: 2272553690326108419}
-  moveSpeed: 1
-  onTheWayTowards: 1
-  potentialTargets: []
 --- !u!1 &6900549509489867826
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,9 +1127,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7403162792425770851}
-  - component: {fileID: 7294204866771893850}
+  - component: {fileID: 4438594647550614396}
   - component: {fileID: 771702076961631616}
   - component: {fileID: 8090591975703924691}
+  - component: {fileID: 7294204866771893850}
   m_Layer: 0
   m_Name: Pig
   m_TagString: Untagged
@@ -1201,11 +1151,62 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6796868153639470982}
   - {fileID: 61816071141096157}
   - {fileID: 2272553690326108419}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4438594647550614396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7076573364877224512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3fa3db6e7b5f6d45a849ecbfbca7a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  home: {fileID: 0}
+  moveSpeed: 1
+  onTheWayTowards: 1
+--- !u!114 &771702076961631616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7076573364877224512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9019e66389cf2d34f8b1f21f29a7f65b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsEatenInt: 0
+  satt: 0
+--- !u!114 &8090591975703924691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7076573364877224512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62242d0d85031724b8253bb61a1f30e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTime: 20
+  partOfPigs:
+  - {fileID: 2175766901543130220}
+  - {fileID: 7821888265778658068}
+  - {fileID: 6900549509489867826}
+  - {fileID: 3271037161493627427}
+  - {fileID: 5227213442522413375}
+  - {fileID: 2247718310473122152}
+  - {fileID: 3167148878748936565}
+  - {fileID: 3217255979863288469}
 --- !u!54 &7294204866771893850
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1233,43 +1234,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &771702076961631616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7076573364877224512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9019e66389cf2d34f8b1f21f29a7f65b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectsOnTop: []
-  objectsEatenInt: 0
-  satt: 0
---- !u!114 &8090591975703924691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7076573364877224512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62242d0d85031724b8253bb61a1f30e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTime: 20
-  partOfPigs:
-  - {fileID: 2175766901543130220}
-  - {fileID: 7821888265778658068}
-  - {fileID: 6900549509489867826}
-  - {fileID: 3271037161493627427}
-  - {fileID: 5227213442522413375}
-  - {fileID: 2247718310473122152}
-  - {fileID: 3167148878748936565}
-  - {fileID: 3217255979863288469}
 --- !u!1 &7821888265778658068
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
-    public Transform target;
-    public float smoothSpeed = 0.125f;
+    [Header("GameDesign")]
     // Offset für schrägen Blick von oben rechts
     public Vector3 offset = new Vector3(3f, 7f, -10f);
+    public float smoothSpeed = 0.125f;
+
+    [Header("PrefabSetup")]
+    public Transform target;
 
     //------------------- BASICS ---------------------------------------------------------
     void LateUpdate()
@@ -16,8 +19,8 @@ public class FollowCamera : MonoBehaviour
         Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
         transform.position = smoothedPosition;
 
-        Vector3 lookDirection = target.position - transform.position;
+        Vector3 lookDirection = target.position - transform.position;        
         lookDirection.y = 0f; // keine Kippung der Kamera
-        transform.rotation = Quaternion.LookRotation(lookDirection, Vector3.up);
+    transform.rotation = Quaternion.LookRotation(lookDirection, Vector3.up);
     }
 }

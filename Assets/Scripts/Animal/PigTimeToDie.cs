@@ -3,17 +3,21 @@ using UnityEngine;
 
 public class PigTimer : MonoBehaviour
 {
+    [Header("GameDesign")]
     public float targetTime = 240.0f;
-    private float countdown;           // interner Zähler
-    public List<GameObject> partOfPigs = new List<GameObject>();
-    GameObject AnimalSpawn;
 
-    //BASICS
+    [Header("PrefabSetup")]
+    public List<GameObject> partOfPigs = new List<GameObject>();
+
+    private float countdown;           // interner Zähler
+    private GameObject Spawns;
+
+    //------------------- BASICS ---------------------------------------------------------
     void Start()
     {
         countdown = targetTime; // Startwert setzen
 
-        AnimalSpawn = GameObject.Find("Animals");
+        Spawns = GameObject.Find("Spawns");
     }
 
     void Update()
@@ -32,21 +36,23 @@ public class PigTimer : MonoBehaviour
     {
         if (!gameObject.GetComponent<FoodHandler>().satt)
         {
-            //Deaktivieren Movement
-            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            //Deaktivieren Movement Component
+            gameObject.GetComponent<AnimalMovement>().enabled = false;
+
+            // wechselt Schwein in Sammlung toter Schweine
+            transform.SetParent(transform.parent.parent.GetChild(1));
 
             // Dreht um 180 Grad um die X-Achse
             transform.Rotate(180f, 0f, 0f, Space.Self);
 
-            //Change Farbe
-
+            //Verändert Farbe
             for (int i = 0; i < partOfPigs.Count; i++)
             {
                 partOfPigs[i].GetComponent<Renderer>().material.color = Color.green;
             }
 
             //Change pig counter
-            AnimalSpawn.GetComponent<AnimalSpawn>().maxPigsCount = AnimalSpawn.GetComponent<AnimalSpawn>().maxPigsCount - 1;
+            Spawns.GetComponent<AnimalSpawn>().maxPigsCount = Spawns.GetComponent<AnimalSpawn>().maxPigsCount - 1;
         }
     }
 }

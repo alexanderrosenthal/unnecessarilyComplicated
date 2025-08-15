@@ -4,28 +4,33 @@ using System.Collections;
 
 public class AnimalSpawn : MonoBehaviour
 {
-    public GameObject prefab;   // Das Prefab, das instanziert werden soll
-    public Transform parent;    // Das Parent-Objekt, unter dem das neue Objekt liegen soll
+    [Header("GameDesign")]
     public int maxPigs = 5;
     public int maxPigsCount = 0;
-    public Transform spawnParent;
-    public List<Transform> spawnPoints = new List<Transform>();
     public float minSpawnInterval = 0.5f;  // minimale Wartezeit in Sekunden
     public float maxSpawnInterval = 2f;    // maximale Wartezeit in Sekunden
 
-    //BASICS
+    [Header("LevelSetup")]
+    public GameObject prefab;   // Das Prefab, das instanziert werden soll
+    public Transform animalParent;    // Das Parent-Objekt, unter dem das neue Objekt liegen soll
+    private Transform spawnPosition;
+
+    [Header("By Code")]
+    public Transform spawnParent; public List<Transform> listOfSpawns = new List<Transform>();
+
+    //------------------- BASICS ---------------------------------------------------------
     void Start()
     {
         //Stellt Liste der Spawnpoints zusammen
-        for (int i = 0; i < spawnParent.childCount; i++)
+        for (int i = 0; i < transform.childCount; i++)
         {
-            spawnPoints.Add(spawnParent.GetChild(i).transform);
+            listOfSpawns.Add(transform.GetChild(i).transform);
         }
 
         StartCoroutine(TriggerRoutine());
     }
 
-    //INDIVIDUAL
+    //------------------- INDIVIDUALS ---------------------------------------------------------
     IEnumerator TriggerRoutine()
     {
         while (true)
@@ -41,43 +46,43 @@ public class AnimalSpawn : MonoBehaviour
 
     void TriggerAction()
     {
-        if (maxPigsCount > maxPigs)
-        {
-            Debug.Log("no more pigs");
-            return;
-        }
+        HandleMaxPigs();
 
-        maxPigsCount = maxPigsCount + 1;
+        ChooseSpawn();
 
-        //Debug.Log("maxPigsCount " + maxPigsCount);
-
-        int random = Random.Range(0, spawnPoints.Count);
-
-        parent = spawnPoints[random];
-
-        if (prefab != null && parent != null)
+        if (prefab != null && animalParent != null)
         {
             // Instanziere das Prefab an der Position und Rotation des Parents
-            GameObject instance = Instantiate(prefab, parent.position, parent.rotation);
+            GameObject instance = Instantiate(prefab, spawnPosition.position, spawnPosition.rotation);
 
             // Setze das Parent-Transform des Instanzierten Objekts
-            instance.transform.SetParent(parent);
+            instance.transform.SetParent(animalParent.GetChild(0));
 
-            Debug.LogWarning("Vector3.zero + " + Vector3.zero);
-            Debug.LogWarning("Quaternion.identity + " + Quaternion.identity);
-            Debug.LogWarning("Vector3.one + " + Vector3.one);
-
-            // Optional: Falls du die lokale Position/Rotation/Skalierung zurücksetzen möchtest:
-            instance.transform.localPosition = Vector3.zero;
-            instance.transform.localRotation = Quaternion.identity;
-            instance.transform.localScale = Vector3.one;
-
-            instance.transform.GetChild(0).GetComponent<AnimalMovement>().home = parent.GetChild(1);
-
+            instance.transform.GetComponent<AnimalMovement>().home = spawnPosition;
         }
         else
         {
             Debug.LogWarning("Prefab oder Parent nicht gesetzt!");
         }
+    }
+
+    private bool HandleMaxPigs()
+    {
+        //Sicherstellen, dass nur begrenzte Anzahl an Tieren
+        if (maxPigsCount >= maxPigs)
+        {
+            return false;
+        }
+
+        maxPigsCount = maxPigsCount + 1;
+
+        return true;
+    }
+    
+    private void ChooseSpawn()
+    {
+        int random = Random.Range(0, listOfSpawns.Count - 1);
+
+        spawnPosition = listOfSpawns[random];
     }
 }

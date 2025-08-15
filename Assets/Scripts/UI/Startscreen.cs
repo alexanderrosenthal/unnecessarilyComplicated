@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Startscreen : MonoBehaviour
 {
+    [Header("LevelSetup")]
     public Transform ScoreUI;
 
     //------------------- BASICS ---------------------------------------------------------
@@ -9,7 +10,7 @@ public class Startscreen : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; i++)
         {
-            this.transform.GetChild(i).gameObject.SetActive(true);
+            transform.GetChild(i).gameObject.SetActive(true);
         }
     }
 
@@ -18,7 +19,7 @@ public class Startscreen : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; i++)
         {
-            this.transform.GetChild(i).gameObject.SetActive(false);
+            transform.GetChild(i).gameObject.SetActive(false);
         }
 
         for (int i = 0; i < ScoreUI.childCount; i++)

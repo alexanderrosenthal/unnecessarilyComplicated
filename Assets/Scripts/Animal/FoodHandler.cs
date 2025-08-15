@@ -3,7 +3,7 @@ using UnityEngine;
 public class FoodHandler : MonoBehaviour
 {
     public int objectsEatenInt = 0;
-    Collision thisCollision;
+    private Collision thisCollision;
     CubeHandler cubeHandler;
     bool colliding = false;
     public bool satt;
@@ -14,12 +14,15 @@ public class FoodHandler : MonoBehaviour
         if (objectsEatenInt > 1)
         {
             satt = true;
-            transform.GetChild(0).GetComponent<AnimalMovement>().onTheWayTowards = false;
+            transform.GetComponent<AnimalMovement>().onTheWayTowards = false;
         }
 
-        if (colliding && cubeHandler.countOnCube > 0 && !satt)
+        if (colliding)
         {
-            AnimalTakingObject();
+            if (cubeHandler.countOnCube > 0 && !satt)
+            {
+                AnimalTakingObject();
+            }
         }
     }
 

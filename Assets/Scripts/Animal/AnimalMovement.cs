@@ -3,58 +3,50 @@ using System.Collections.Generic;
 
 public class AnimalMovement : MonoBehaviour
 {
+    [Header("GameDesign")]
+    public float moveSpeed = 5f;  // Geschwindigkeit in Einheiten pro Sekunde
+
+    [Header("By Code")]
     public Transform target;
     public Transform home;
-    public Transform animal;
-    public Transform animalBody;
-    public float moveSpeed = 5f;  // Geschwindigkeit in Einheiten pro Sekunde
     public bool onTheWayTowards = true;
-    public List<Transform> potentialTargets = new List<Transform>();
 
-    //BASICS
+    //------------------- BASICS ---------------------------------------------------------
     void Start()
     {
         Transform spotsT = GameObject.Find("Spots").transform;
 
-        for (int i = 0; i < spotsT.childCount; i++)
-        {
-            Transform child = spotsT.GetChild(i);
-
-            if (child.GetChild(0).GetComponent<CubeHandler>().takingInput == true)
-            {
-                potentialTargets.Add(child.GetChild(1).transform);
-            }
-        }
-
-        int random = Random.Range(0, potentialTargets.Count);
-        target = potentialTargets[random];
+        int random = Random.Range(0, spotsT.GetComponent<SpotHandler>().takingInputTargets.Count);
+        //Zielt auf den AnimalContacter und mag den gesamt Spot nicht (Y-Position?)
+        target = spotsT.GetComponent<SpotHandler>().takingInputTargets[random].GetChild(0);
     }
 
     void Update()
     {
         if (onTheWayTowards)
         {
-            if (target == null) return;
-
-            // Schrittweite pro Frame
-            float step = moveSpeed * Time.deltaTime;
-
-            // Bewege das Objekt gleichmäßig in Richtung Ziel
-            animal.position = Vector3.MoveTowards(transform.position, target.position, step);
-
-            animalBody.LookAt(target);
+            Move(target);
         }
-        else if (onTheWayTowards == false)
+        else if (!onTheWayTowards)
         {
-            if (home == null) return;
-
-            // Schrittweite pro Frame
-            float step = moveSpeed * Time.deltaTime;
-
-            // Bewege das Objekt gleichmäßig in Richtung Ziel
-            animal.position = Vector3.MoveTowards(transform.position, home.position, step);
-
-            animalBody.LookAt(home);
+            Move(home);
         }
+    }
+
+    //------------------- INDIVIDUAL ---------------------------------------------------------
+    private bool Move(Transform moveTarget)
+    {
+        if (moveTarget == null) return false;
+
+        // Schrittweite pro Frame
+        float step = moveSpeed * Time.deltaTime;
+
+        // Bewege das Objekt gleichmäßig in Richtung Ziel
+        transform.position = Vector3.MoveTowards(transform.position, moveTarget.position, step);
+
+        //Schwein auf Ziel ausrichten
+        transform.LookAt(moveTarget);
+
+        return true;
     }
 }

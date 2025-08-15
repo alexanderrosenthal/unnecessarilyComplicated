@@ -3,7 +3,10 @@ using TMPro;
 
 public class Score : MonoBehaviour
 {
+    [Header("LevelSetup")]
     public GameObject textElement;
+
+    [Header("By Code")]
     public int countOfSattPigsTotal;
 
     //------------------- BASICS ---------------------------------------------------------

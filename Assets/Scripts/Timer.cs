@@ -3,8 +3,13 @@ using System.Collections.Generic;
 
 public class SimpleTimer : MonoBehaviour
 {
-    public List<GameObject> potentialScripts = new List<GameObject>();
+    [Header("GameDesign")]
     public float targetTime = 30.0f;
+
+    [Header("LevelSetup")]
+    public List<GameObject> potentialScripts = new List<GameObject>();
+
+    [Header("By Code")]
     private float countdown;           // interner Zähler
 
     //------------------- BASICS ---------------------------------------------------------
